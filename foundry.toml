@@ -1,0 +1,16 @@
+[profile.default]
+src = "contracts"
+test = "test"
+out = "out"
+libs = ["lib"]
+solc = "0.8.20"
+remappings = [
+  "forge-std/=lib/forge-std/src/",
+  "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+  "@openzeppelin/=lib/openzeppelin-contracts/"
+]
+
+fs_permissions = [
+  { access = "read",  path = "./" },
+  { access = "write", path = "./addresses.foundry.json" }
+]
